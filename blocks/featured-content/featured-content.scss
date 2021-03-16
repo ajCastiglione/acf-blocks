@@ -1,0 +1,23 @@
+@import "../../library/scss/functions.scss";
+
+#featured-content-block {
+    .featured-content {
+        position: relative;
+        width: 100vw;
+        left: calc(-50vw + 50%);
+        padding: 24px;
+        text-align: center;
+        background-color: $gray;
+        margin-bottom: 22px;
+        @include media("tablet") {
+            padding: 32px 24px;
+        }
+        &__container {
+            max-width: 900px;
+            margin: auto;
+            a {
+                text-decoration: underline;
+            }
+        }
+    }
+}

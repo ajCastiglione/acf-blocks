@@ -1,0 +1,37 @@
+@import "../../library/scss/functions.scss";
+
+#content-media-block {
+    .content-media {
+        margin: 18px 0;
+        &__container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            @include media("tablet") {
+                flex-wrap: nowrap;
+            }
+            &.img-left {
+                .img {
+                    @include media("tablet") {
+                        margin-right: 22px;
+                    }
+                }
+            }
+            &.img-right {
+                flex-direction: row-reverse;
+                .img {
+                    @include media("tablet") {
+                        margin-left: 22px;
+                    }
+                }
+            }
+
+            .img {
+                @include media("tablet") {
+                    max-width: 400px;
+                }
+            }
+        }
+    }
+}

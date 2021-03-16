@@ -1,0 +1,57 @@
+@import "../../library/scss/functions.scss";
+
+#faqs-block {
+    .faqs {
+        padding-bottom: 22px;
+        &__title {
+            font-weight: bold;
+            text-align: center;
+        }
+        .acf-block-preview & {
+            .faq:nth-of-type(1) {
+                .faq-title i {
+                    transform: rotate(180deg);
+                }
+                .faq-content {
+                    display: block;
+                }
+            }
+        }
+        .faq {
+            &-title {
+                position: relative;
+                color: $black;
+                font-size: 20px;
+                font-weight: bold;
+                padding: 16px 32px 16px 0;
+                border-radius: 3px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                border-bottom: 2px solid $gray;
+                margin-bottom: 12px;
+
+                i {
+                    color: $primary;
+                }
+                &.active {
+                    i {
+                        transform: rotate(180deg);
+                    }
+                }
+                i {
+                    position: absolute;
+                    right: 12px;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto;
+                    display: flex;
+                    align-items: center;
+                    transition: all 0.3s ease;
+                }
+            }
+            &-content {
+                display: none;
+            }
+        }
+    }
+}
